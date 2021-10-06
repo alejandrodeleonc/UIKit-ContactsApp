@@ -18,13 +18,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let navController = UINavigationController(rootViewController:  ContactListVC())
-        navController.navigationBar.prefersLargeTitles = true
+        let navController = createContactsNC()
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
+    }
+    
+    
+    func createContactsNC()->UINavigationController{
+        let contactsVC = ContactListVC()
+        contactsVC.title = "Mis contactos"
+        return UINavigationController(rootViewController: contactsVC)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

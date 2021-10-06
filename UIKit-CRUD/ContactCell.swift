@@ -8,8 +8,10 @@
 import UIKit
 
 class ContactCell: UITableViewCell {
-    var contactImageView = UIImageView()
-    var contactNameLabel = UILabel()
+    var contactImageView  = UIImageView()
+    var contactNameLabel  = UILabel()
+    var contactPhoneLabel = UILabel()
+    
 //    var contactPhoneLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier:String?){
@@ -28,9 +30,11 @@ class ContactCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func set(contact: Contact){
         contactImageView.image = contact.image
         contactNameLabel.text = contact.name
+        
     }
     
     

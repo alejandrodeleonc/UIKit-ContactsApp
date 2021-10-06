@@ -11,19 +11,30 @@ class ContactListVC: UIViewController {
     
     var tableView = UITableView()
     var contacts:[Contact] = []
-    
+    var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewContact))
+    var deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteContacts))
     
     struct Cells {
         static let contactSell = "ContactCells"
     }
     
+    @objc func addNewContact(){
+        print("Add contact ...")
+    }
+    
+    @objc func deleteContacts(){
+        print("Delete contact ...")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Mis contactos"
         contacts = fetchData()
         configureTableView();
+//        navigationItem.rightBarButtonItem = addButton
+        navigationItem.rightBarButtonItems = [deleteButton, addButton]
+        
         // Do any additional setup after loading the view.
     }
+    
     
     
     func configureTableView(){
@@ -40,6 +51,8 @@ class ContactListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    
 
 
 }
@@ -68,7 +81,7 @@ extension ContactListVC{
     
     func fetchData() -> [Contact]{
         
-        let contact  = Contact(image: Images.person as! UIImage, name: "Persona 1", phone: "8095552111")
+        let contact  = Contact(image: Images.person!, name: "Persona 1", phone: "8095552111")
         
         return [contact, contact, contact, contact, contact, contact, contact, contact, contact, contact]
     }
