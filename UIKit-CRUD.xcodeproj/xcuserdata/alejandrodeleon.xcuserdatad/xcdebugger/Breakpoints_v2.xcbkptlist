@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "249A39B2-185D-4FA0-AF06-41F6FA8CCB7A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84A73866-827A-4B81-962E-47F1991B204F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UIKit-CRUD/Cell/ContactCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ContactCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "84A73866-827A-4B81-962E-47F1991B204F - 6005a9426036cac0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIKit_CRUD.ContactCell.contactPhoneLabel.getter : __C.UILabel"
+                  moduleName = "UIKit-CRUD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandrodeleon/Desktop/programmingStuff/iosApps/UIKit-ContactsApp/UIKit-CRUD/Cell/ContactCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "84A73866-827A-4B81-962E-47F1991B204F - 374417709c33aef4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIKit_CRUD.ContactCell.contactPhoneLabel.setter : __C.UILabel"
+                  moduleName = "UIKit-CRUD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandrodeleon/Desktop/programmingStuff/iosApps/UIKit-ContactsApp/UIKit-CRUD/Cell/ContactCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "84A73866-827A-4B81-962E-47F1991B204F - 62fd5c5a00789f78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIKit_CRUD.ContactCell.contactPhoneLabel.modify : __C.UILabel"
+                  moduleName = "UIKit-CRUD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandrodeleon/Desktop/programmingStuff/iosApps/UIKit-ContactsApp/UIKit-CRUD/Cell/ContactCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "84A73866-827A-4B81-962E-47F1991B204F - c88f3af2d4acd1f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UIKit_CRUD.ContactCell.contactPhoneLabel.modify : __C.UILabel with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "UIKit-CRUD"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandrodeleon/Desktop/programmingStuff/iosApps/UIKit-ContactsApp/UIKit-CRUD/Cell/ContactCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
