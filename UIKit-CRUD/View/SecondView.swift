@@ -37,21 +37,15 @@ class SecondView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addSubview(myCollectionView)
         addSubview(addBtn)
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Set Layouts
-    
-//    override func layoutSubviews() {
-//        myCollectionView.makeConstraints { (make) in
-//            make.edges.equalTo(self)
-//    }
-    
-//    }
     
 }

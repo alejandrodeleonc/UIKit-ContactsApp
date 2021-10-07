@@ -10,12 +10,12 @@ import UIKit
 class SecondViewController: UIViewController {
 
     //MARK: - Properties
+        var newView = SecondView()
        
-       let secondView = SecondView()
        var pictureInfo = [FetchedImage]() {
            didSet{
                DispatchQueue.main.async {
-                   self.secondView.myCollectionView.reloadData()
+                   self.newView.myCollectionView.reloadData()
                    print(self.pictureInfo[0].url)
                }
            }
@@ -25,9 +25,11 @@ class SecondViewController: UIViewController {
        
        override func viewDidLoad() {
            super.viewDidLoad()
-           view = secondView
-           secondView.myCollectionView.dataSource = self
-           secondView.myCollectionView.delegate = self
+        view.addSubview(newView)
+        newView.pin(to: view)
+        newView.myCollectionView.dataSource = self
+        newView.myCollectionView.delegate = self
+            
            fetchImages()
            setNavBtn()
        }
@@ -35,8 +37,8 @@ class SecondViewController: UIViewController {
        //MARK: - Functions
        
        func setNavBtn() {
-           navigationItem.rightBarButtonItem = UIBarButtonItem(customView: secondView.addBtn)
-           secondView.addBtn.addTarget(self, action: #selector(addImages), for: .touchUpInside)
+           navigationItem.rightBarButtonItem = UIBarButtonItem(customView: newView.addBtn)
+        newView.addBtn.addTarget(self, action: #selector(addImages), for: .touchUpInside)
        }
        
        @objc func addImages() {
