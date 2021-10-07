@@ -5,39 +5,47 @@
 //  Created by Alejandro De Leon on 10/6/21.
 //
 
+import SwiftUIFontIcon
 import UIKit
 
 class ContactListVC: UIViewController {
     
     var tableView = UITableView()
     var contacts:[Contact] = []
-    var addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewContact))
-    var deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteContacts))
+    var window: UIWindow?
+    
     
     struct Cells {
         static let contactSell = "ContactCells"
     }
     
+   
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(ContactListVC.addNewContact))
+        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(ContactListVC.deleteContacts))
+        navigationItem.rightBarButtonItems = [deleteButton, addButton]
+        contacts = fetchData()
+        configureTableView();
+        
+    }
+    
+    
+    
     @objc func addNewContact(){
-        print("Add contact ...")
+        print("add contact")
+        
     }
     
     @objc func deleteContacts(){
         print("Delete contact ...")
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        contacts = fetchData()
-        configureTableView();
-//        navigationItem.rightBarButtonItem = addButton
-        navigationItem.rightBarButtonItems = [deleteButton, addButton]
-        
-        // Do any additional setup after loading the view.
-    }
-    
     
     
     func configureTableView(){
+        
+        print("configureTableView")
         view.addSubview(tableView)
         
         setTableViewDelegates()
@@ -69,9 +77,17 @@ extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
         let contact = contacts[indexPath.row]
         cell.set(contact: contact)
         
-        
         return cell
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contactVC = ContactVC()
+        contactVC.contact = contacts[indexPath.row]
+        navigationController?.navigationItem.backBarButtonItem?.title = "Cancel"
+        navigationController?.pushViewController(contactVC, animated: true)
+    }
+
     
     
 }
