@@ -74,11 +74,9 @@
 				4303D47E270DD78F00717DDF /* AppDelegate.swift */,
 				4303D480270DD78F00717DDF /* SceneDelegate.swift */,
 				43AE5639270DEFBB0081313B /* Model */,
-				4303D492270DDA1300717DDF /* ContactListVC.swift */,
-				434F64D7270F7A6F0002ED02 /* ImageData.swift */,
-				434F64D5270F482C0002ED02 /* ContactVC.swift */,
-				43AE5635270DE9950081313B /* ContactCell.swift */,
-				43AE5636270DE9950081313B /* ContactCell.xib */,
+				43A3228F270FB038001E65E2 /* View */,
+				43A32290270FB044001E65E2 /* Controller */,
+				43A32291270FB05C001E65E2 /* Cell */,
 				4303D487270DD79000717DDF /* Assets.xcassets */,
 				4303D489270DD79000717DDF /* LaunchScreen.storyboard */,
 				4303D48C270DD79000717DDF /* Info.plist */,
@@ -95,9 +93,35 @@
 			path = "Extensiond-Utilities";
 			sourceTree = "<group>";
 		};
+		43A3228F270FB038001E65E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43A32290270FB044001E65E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				434F64D5270F482C0002ED02 /* ContactVC.swift */,
+				4303D492270DDA1300717DDF /* ContactListVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		43A32291270FB05C001E65E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				43AE5636270DE9950081313B /* ContactCell.xib */,
+				43AE5635270DE9950081313B /* ContactCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		43AE5639270DEFBB0081313B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				434F64D7270F7A6F0002ED02 /* ImageData.swift */,
 				43AE563A270DEFE40081313B /* Contact.swift */,
 			);
 			path = Model;
