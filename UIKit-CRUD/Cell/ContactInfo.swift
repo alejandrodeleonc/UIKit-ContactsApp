@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddImageCell: UITableViewCell {
+class ContactIngfoCell: UITableViewCell {
     
     var imagefffView = UIImageView(image: UIImage(systemName: "person")!)
     

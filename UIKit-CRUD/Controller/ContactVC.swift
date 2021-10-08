@@ -22,7 +22,10 @@ class ContactVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         title = "Nuevo contacto"
+        
+        
 //        addContactView.pin(to: view)
         fetchImages()
         
