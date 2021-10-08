@@ -8,28 +8,6 @@
 import UIKit
 
 class ContactVC: UIViewController {
-<<<<<<< HEAD
-    let firstView = FirstView()
-    
-    //MARK: - Life Cycle
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addBtnFuc()
-        view = firstView
-    }
-    
-    //MARK: - Functions
-    
-    func addBtnFuc() {
-        firstView.myBtn.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
-    }
-    
-    @objc func nextPage() {
-        
-    }
-}
-=======
     var contact: Contact?
     
     
@@ -51,4 +29,3 @@ class ContactVC: UIViewController {
 
 
  
->>>>>>> imagenRandom

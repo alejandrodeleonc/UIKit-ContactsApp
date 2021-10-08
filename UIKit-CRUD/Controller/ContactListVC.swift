@@ -87,10 +87,7 @@ extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let contactVC = ContactVC()
-//        contactVC.contact = contacts[indexPath.row]
-//        navigationController?.navigationItem.backBarButtonItem?.title = "Cancel"
-//        navigationController?.pushViewController(contactVC, animated: true)
-        navigationController?.pushViewController(SecondViewController(), animated: true)
+        navigationController?.pushViewController(contactVC, animated: true)
     }
 
 }
