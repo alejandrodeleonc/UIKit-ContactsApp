@@ -67,7 +67,6 @@ class ContactInfoCell: UITableViewCell {
         atributeLabel.translatesAutoresizingMaskIntoConstraints                                   = false
         atributeLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive            = true
         atributeLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive     = true
-//        atributeLabel.font = UIFont.O
         atributeLabel.textColor = .gray
         atributeLabel.font = UIFont.systemFont(ofSize: 12)
     }
@@ -75,7 +74,6 @@ class ContactInfoCell: UITableViewCell {
     
     func setTextFieldConstraints(){
         textField.translatesAutoresizingMaskIntoConstraints                                   = false
-//        textField.widthAnchor.constraint(equalToConstant: 350).isActive = true
         textField.topAnchor.constraint(equalTo: atributeLabel.bottomAnchor, constant: 5).isActive            = true
         textField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15).isActive     = true
         textField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive     = true

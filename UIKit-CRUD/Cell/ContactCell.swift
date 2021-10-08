@@ -9,9 +9,9 @@ import UIKit
 
 class ContactCell: UITableViewCell {
     var contactImageView  = UIImageView()
-    var contactNameLabel  = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-    var contactPhoneLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-    var contactGreaterLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+    var contactNameLabel  = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 21))
+    var contactPhoneLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 50, height: 21))
+    var contactGreaterLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 20, height: 21))
     var horizontalSV = UIStackView()
     var verticalSV = UIStackView()
     
@@ -129,6 +129,14 @@ class ContactCell: UITableViewCell {
         
 //        contactPhoneLabel.heightAnchor.constraint(equalToConstant: 80).isActive                                      = true
 //        contactPhoneLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12).isActive                 = true
+    }
+    
+    func setGreaterLabelConstraints(){
+        contactGreaterLabel.translatesAutoresizingMaskIntoConstraints                                               = false
+        
+        contactGreaterLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5).isActive = true
+//        contactNameLabel.leadingAnchor.constraint(equalTo: horizontalSV.leadingAnchor, constant: 5).isActive = true
+        
     }
     
 }
