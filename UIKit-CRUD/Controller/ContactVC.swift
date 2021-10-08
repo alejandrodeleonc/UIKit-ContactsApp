@@ -9,20 +9,27 @@ import UIKit
 
 class ContactVC: UIViewController {
     var contact: Contact?
-    
-    
     var addContactView  = AddContactV()
     
     var saveButton = UIButton()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         title = "Nuevo contacto"
+        if self.contact != nil{
+            addContactView.contact = contact
+        }
         view.addSubview(addContactView)
         addContactView.pin(to: view)
 
         
     }
+    
+    
+    
+    
 }
 
 

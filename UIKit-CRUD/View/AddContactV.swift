@@ -8,6 +8,9 @@
 import UIKit
 
 class AddContactV: UIView {
+    
+    var contact:Contact?
+    
     //MARK: - Stacks Views
     var verticalSV  = UIStackView()
     var imageV      = UIView()
@@ -16,6 +19,7 @@ class AddContactV: UIView {
     
     //MARK: - imageV  Components
     var pictureInfo: [FetchedImage] = []
+    var image: UIImage?
     var imageView   = UIImageView(image: UIImage(systemName: "person"))
     var imageButton: UIButton = {
 
@@ -26,7 +30,7 @@ class AddContactV: UIView {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         button.setTitleColor(.gray, for: .normal)
         button.isEnabled = true
-
+        button.addTarget(self, action: #selector(getRadomImage), for: .touchUpInside)
         return button
     }()
     
@@ -41,10 +45,10 @@ class AddContactV: UIView {
         button.backgroundColor = UIColor(red: 0.50, green: 0.50, blue: 0.50, alpha: 1.00)
         button.setTitle("Guardar", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = true
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.setTitleColor(.white, for: .normal)
         button.isEnabled = true
-
+        
         return button
     }()
     
@@ -59,8 +63,10 @@ class AddContactV: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
-        
+        fetchImages()
         configureVerticalStack()
+        
+      
     }
     
     required init?(coder: NSCoder) {
@@ -98,6 +104,9 @@ class AddContactV: UIView {
         imageV.addSubview(imageView)
         imageV.addSubview(imageButton)
         
+        if self.contact != nil{
+            self.imageView.image = self.contact?.image
+        }
         setImageViewContraints()
         
     }
@@ -205,9 +214,16 @@ extension AddContactV: UITableViewDelegate, UITableViewDataSource {
         return 3
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Cells.contactInfoCell) as! ContactInfoCell
         let field = fields[indexPath.row]
+        if self.contact != nil
+        {
+            cell.contact = self.contact
+        }
+        
         cell.setLabel(text: field)
         
         return cell
@@ -246,8 +262,7 @@ extension AddContactV{
                            let picInfo = try decoder.decode([FetchedImage].self, from: data)
                            self.pictureInfo.append(contentsOf: picInfo)
                            
-                           print("TODO BIEN")
-                           self.getRadomImage()
+//                           self.getRadomImage()
                        }catch{
                            print("ERROR")
                            print(error)
@@ -260,9 +275,9 @@ extension AddContactV{
    }
    
    
-   func getRadomImage()
+   @objc func getRadomImage()
    {
-       
+       self.image = nil
        print("cantidad de imagines -> \(pictureInfo.count)")
        let randomInt = Int.random(in: 1..<pictureInfo.count)
 
@@ -274,12 +289,11 @@ extension AddContactV{
                    print("Error: \(error)")
                }else if let data = data {
                    DispatchQueue.main.async {
-                       print("TOdo good")
-                       print(data)
+                       self.imageView.image = UIImage(data:data )
+//                       = UIImageView(image:UIImage(data:data ))
                        //UIImage(data:data)
                    }
-                   
-
+                
                }
            
            }.resume()

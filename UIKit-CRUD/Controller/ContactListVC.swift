@@ -38,8 +38,8 @@ class ContactListVC: UIViewController {
     
     
     @objc func addNewContact(){
-        print("add contact")
-        
+        let contactVC = ContactVC()
+        navigationController?.pushViewController(contactVC, animated: true)
     }
     
     @objc func deleteContacts(){
@@ -86,7 +86,9 @@ extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contact = contacts[indexPath.row]
         let contactVC = ContactVC()
+        contactVC.contact = contact
         navigationController?.pushViewController(contactVC, animated: true)
     }
 
@@ -97,7 +99,7 @@ extension ContactListVC{
     
     func fetchData() -> [Contact]{
         
-        let contact  = Contact(image: Images.person!, name: "Persona 1", phone: "8095552111")
+        let contact  = Contact(image: Images.person!, name: "Persona 1", lastName:"Apellido 1",phone: "8095552111")
         
         return [contact, contact, contact, contact, contact, contact, contact, contact, contact, contact]
     }

@@ -11,5 +11,6 @@ import UIKit
 struct Contact {
     var image: UIImage
     var name: String
+    var lastName: String
     var phone: String
 }
