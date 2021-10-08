@@ -15,19 +15,37 @@ class ContactVC: UIViewController {
     var imageST = UIStackView()
     var loadImageButton = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
     var pictureInfo: [FetchedImage] = []
+    var addContactView  = AddContactV()
 //    let imageView = UIImageView(image: image!)
     
     var saveButton = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        title = "Nuevo contacto"
         
+        title = "Nuevo contacto"
+//        addContactView.pin(to: view)
         fetchImages()
+        
+        view.addSubview(addContactView)
+        addContactView.pin(to: view)
+//        addContactView
+        
+//        AddContactV()
         
     }
     
     
+   
+    
+
+}
+
+
+
+
+ //MARK: FUNCIONES
+
+extension ContactVC{
     func fetchImages() {
         let address = "https://jsonplaceholder.typicode.com/photos"
         
@@ -61,7 +79,7 @@ class ContactVC: UIViewController {
         
         print("cantidad de imagines -> \(pictureInfo.count)")
         let randomInt = Int.random(in: 1..<pictureInfo.count)
-//
+
         print("la url -> \(pictureInfo[randomInt].url)")
         
         if let url = URL(string: pictureInfo[randomInt].url){
@@ -82,5 +100,4 @@ class ContactVC: UIViewController {
         }
     }
     
-
 }

@@ -16,6 +16,8 @@
 		434F64D1270E3AE50002ED02 /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 434F64D0270E3AE50002ED02 /* SwiftUIFontIcon */; };
 		434F64D6270F482C0002ED02 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64D5270F482C0002ED02 /* ContactVC.swift */; };
 		434F64D8270F7A6F0002ED02 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64D7270F7A6F0002ED02 /* ImageData.swift */; };
+		43A32293270FB14A001E65E2 /* AddContactV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A32292270FB14A001E65E2 /* AddContactV.swift */; };
+		43A32295270FFE44001E65E2 /* AddImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A32294270FFE44001E65E2 /* AddImageCell.swift */; };
 		43AE5637270DE9950081313B /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE5635270DE9950081313B /* ContactCell.swift */; };
 		43AE5638270DE9950081313B /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AE5636270DE9950081313B /* ContactCell.xib */; };
 		43AE563B270DEFE40081313B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE563A270DEFE40081313B /* Contact.swift */; };
@@ -33,6 +35,8 @@
 		4303D495270DDCDA00717DDF /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		434F64D5270F482C0002ED02 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		434F64D7270F7A6F0002ED02 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+		43A32292270FB14A001E65E2 /* AddContactV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactV.swift; sourceTree = "<group>"; };
+		43A32294270FFE44001E65E2 /* AddImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCell.swift; sourceTree = "<group>"; };
 		43AE5635270DE9950081313B /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		43AE5636270DE9950081313B /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		43AE563A270DEFE40081313B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 		43A3228F270FB038001E65E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43A32292270FB14A001E65E2 /* AddContactV.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +119,7 @@
 			children = (
 				43AE5636270DE9950081313B /* ContactCell.xib */,
 				43AE5635270DE9950081313B /* ContactCell.swift */,
+				43A32294270FFE44001E65E2 /* AddImageCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -204,12 +210,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AE563B270DEFE40081313B /* Contact.swift in Sources */,
+				43A32293270FB14A001E65E2 /* AddContactV.swift in Sources */,
 				43AE5637270DE9950081313B /* ContactCell.swift in Sources */,
 				4303D496270DDCDA00717DDF /* UIView+Ext.swift in Sources */,
 				4303D47F270DD78F00717DDF /* AppDelegate.swift in Sources */,
 				43AE563E270DF08B0081313B /* Constants.swift in Sources */,
 				434F64D8270F7A6F0002ED02 /* ImageData.swift in Sources */,
 				4303D481270DD78F00717DDF /* SceneDelegate.swift in Sources */,
+				43A32295270FFE44001E65E2 /* AddImageCell.swift in Sources */,
 				4303D493270DDA1300717DDF /* ContactListVC.swift in Sources */,
 				434F64D6270F482C0002ED02 /* ContactVC.swift in Sources */,
 			);

@@ -17,6 +17,7 @@ class ContactListVC: UIViewController {
     
     struct Cells {
         static let contactSell = "ContactCells"
+        static let addSell = "AddImageCell"
     }
     
    
@@ -88,8 +89,6 @@ extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(contactVC, animated: true)
     }
 
-    
-    
 }
 
 
