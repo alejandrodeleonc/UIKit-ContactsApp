@@ -80,7 +80,7 @@ class ContactCell: UITableViewCell {
     }
     
     func setVerticalSVContraints(){
-        verticalSV.translatesAutoresizingMaskIntoConstraints                                  = false
+        verticalSV.translatesAutoresizingMaskIntoConstraints                                               = false
         verticalSV.topAnchor.constraint(equalTo: horizontalSV.topAnchor, constant: 0).isActive             = true
         verticalSV.leadingAnchor.constraint(equalTo: horizontalSV.leadingAnchor, constant: 0).isActive     = true
         verticalSV.bottomAnchor.constraint(equalTo: horizontalSV.bottomAnchor, constant: 0).isActive       = true

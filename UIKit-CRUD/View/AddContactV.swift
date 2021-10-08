@@ -15,7 +15,7 @@ class AddContactV: UIView {
     var buttonV     = UIView()
     
     //MARK: - imageV  Components
-    
+    var pictureInfo: [FetchedImage] = []
     var imageView   = UIImageView(image: UIImage(systemName: "person"))
     var imageButton: UIButton = {
 
@@ -34,6 +34,7 @@ class AddContactV: UIView {
     
     //MARK: - buttonSV  Components
     
+    let fields = ["Nombre", "Apellido", "Telefono"]
     var saveButton: UIButton = {
 
         let button = UIButton(type: .system)
@@ -49,7 +50,7 @@ class AddContactV: UIView {
     
     
     struct Cells {
-        static let contactInforCell = "ContactIngfoCells"
+        static let contactInfoCell = "ContactIngfoCells"
     }
     
     
@@ -139,8 +140,8 @@ class AddContactV: UIView {
         print("configureTableView")
         
         setTableViewDelegates()
-//        fieldsTV.rowHeight = 85
-        fieldsTV.register(ContactIngfoCell.self, forCellReuseIdentifier: Cells.contactInforCell)
+        fieldsTV.rowHeight = 75
+        fieldsTV.register(ContactInfoCell.self, forCellReuseIdentifier: Cells.contactInfoCell)
 //        tableView.pin(to: )
     }
     
@@ -205,11 +206,11 @@ extension AddContactV: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.contactSell) as! ContactCell
-//        let contact = contacts[indexPath.row]
-//        cell.set(contact: contact)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.contactInfoCell) as! ContactInfoCell
+        let field = fields[indexPath.row]
+        cell.setLabel(text: field)
         
-        return UITableViewCell()
+        return cell
     }
     
     
@@ -224,4 +225,65 @@ extension AddContactV: UITableViewDelegate, UITableViewDataSource {
 //        navigationController?.pushViewController(contactVC, animated: true)
 //    }
 
+}
+
+
+
+//MARK: FUNCIONES
+
+extension AddContactV{
+   func fetchImages() {
+       let address = "https://jsonplaceholder.typicode.com/photos"
+       
+       if let url = URL(string: address){
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               if let error = error{
+                   
+               }else if let response = response as? HTTPURLResponse, let data = data {
+                       print("Status Code : \(response.statusCode)")
+                       do{
+                           let decoder = JSONDecoder()
+                           let picInfo = try decoder.decode([FetchedImage].self, from: data)
+                           self.pictureInfo.append(contentsOf: picInfo)
+                           
+                           print("TODO BIEN")
+                           self.getRadomImage()
+                       }catch{
+                           print("ERROR")
+                           print(error)
+                       }
+                   }
+               }.resume()
+           
+       }
+       
+   }
+   
+   
+   func getRadomImage()
+   {
+       
+       print("cantidad de imagines -> \(pictureInfo.count)")
+       let randomInt = Int.random(in: 1..<pictureInfo.count)
+
+       print("la url -> \(pictureInfo[randomInt].url)")
+       
+       if let url = URL(string: pictureInfo[randomInt].url){
+           URLSession.shared.dataTask(with: url) { data, response, error in
+               if let error = error {
+                   print("Error: \(error)")
+               }else if let data = data {
+                   DispatchQueue.main.async {
+                       print("TOdo good")
+                       print(data)
+                       //UIImage(data:data)
+                   }
+                   
+
+               }
+           
+           }.resume()
+       }
+   }
+   
 }
