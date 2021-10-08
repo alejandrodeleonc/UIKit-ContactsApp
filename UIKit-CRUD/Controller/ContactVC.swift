@@ -8,6 +8,7 @@
 import UIKit
 
 class ContactVC: UIViewController {
+<<<<<<< HEAD
     let firstView = FirstView()
     
     //MARK: - Life Cycle
@@ -28,3 +29,26 @@ class ContactVC: UIViewController {
         
     }
 }
+=======
+    var contact: Contact?
+    
+    
+    var addContactView  = AddContactV()
+    
+    var saveButton = UIButton()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    
+        title = "Nuevo contacto"
+        view.addSubview(addContactView)
+        addContactView.pin(to: view)
+
+        
+    }
+}
+
+
+
+
+ 
+>>>>>>> imagenRandom

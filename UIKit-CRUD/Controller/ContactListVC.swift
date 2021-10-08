@@ -17,6 +17,7 @@ class ContactListVC: UIViewController {
     
     struct Cells {
         static let contactSell = "ContactCells"
+        static let addSell = "AddImageCell"
     }
     
    
@@ -26,6 +27,9 @@ class ContactListVC: UIViewController {
         let addButton = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(ContactListVC.addNewContact))
         let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(ContactListVC.deleteContacts))
         navigationItem.rightBarButtonItems = [deleteButton, addButton]
+        navigationItem.backButtonTitle = "Cancel"
+        navigationController?.navigationBar.tintColor = .black
+        
         contacts = fetchData()
         configureTableView();
         
@@ -89,8 +93,6 @@ extension ContactListVC: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(SecondViewController(), animated: true)
     }
 
-    
-    
 }
 
 

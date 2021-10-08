@@ -16,11 +16,16 @@
 		434F64D1270E3AE50002ED02 /* SwiftUIFontIcon in Frameworks */ = {isa = PBXBuildFile; productRef = 434F64D0270E3AE50002ED02 /* SwiftUIFontIcon */; };
 		434F64D6270F482C0002ED02 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64D5270F482C0002ED02 /* ContactVC.swift */; };
 		434F64D8270F7A6F0002ED02 /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64D7270F7A6F0002ED02 /* ImageData.swift */; };
+<<<<<<< HEAD
 		434F64DC270F83F00002ED02 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64DB270F83F00002ED02 /* SecondViewController.swift */; };
 		434F64DF270F86180002ED02 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64DE270F86180002ED02 /* SecondView.swift */; };
 		434F64E1270F87840002ED02 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64E0270F87840002ED02 /* CollectionVC.swift */; };
 		434F64E3270F87C20002ED02 /* MyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64E2270F87C20002ED02 /* MyImageView.swift */; };
 		434F64E5270F89440002ED02 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434F64E4270F89440002ED02 /* FirstView.swift */; };
+=======
+		43A32293270FB14A001E65E2 /* AddContactV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A32292270FB14A001E65E2 /* AddContactV.swift */; };
+		43A32295270FFE44001E65E2 /* ContactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A32294270FFE44001E65E2 /* ContactInfo.swift */; };
+>>>>>>> imagenRandom
 		43AE5637270DE9950081313B /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE5635270DE9950081313B /* ContactCell.swift */; };
 		43AE5638270DE9950081313B /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43AE5636270DE9950081313B /* ContactCell.xib */; };
 		43AE563B270DEFE40081313B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE563A270DEFE40081313B /* Contact.swift */; };
@@ -38,11 +43,16 @@
 		4303D495270DDCDA00717DDF /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		434F64D5270F482C0002ED02 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		434F64D7270F7A6F0002ED02 /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		434F64DB270F83F00002ED02 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		434F64DE270F86180002ED02 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		434F64E0270F87840002ED02 /* CollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionVC.swift; sourceTree = "<group>"; };
 		434F64E2270F87C20002ED02 /* MyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageView.swift; sourceTree = "<group>"; };
 		434F64E4270F89440002ED02 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+=======
+		43A32292270FB14A001E65E2 /* AddContactV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactV.swift; sourceTree = "<group>"; };
+		43A32294270FFE44001E65E2 /* ContactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfo.swift; sourceTree = "<group>"; };
+>>>>>>> imagenRandom
 		43AE5635270DE9950081313B /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		43AE5636270DE9950081313B /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		43AE563A270DEFE40081313B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -85,8 +95,14 @@
 				4303D480270DD78F00717DDF /* SceneDelegate.swift */,
 				43A3228C270FA7E2001E65E2 /* View */,
 				43AE5639270DEFBB0081313B /* Model */,
+<<<<<<< HEAD
 				43A3228D270FA7F1001E65E2 /* Controller */,
 				43A3228E270FA7F9001E65E2 /* Cell */,
+=======
+				43A3228F270FB038001E65E2 /* View */,
+				43A32290270FB044001E65E2 /* Controller */,
+				43A32291270FB05C001E65E2 /* Cell */,
+>>>>>>> imagenRandom
 				4303D487270DD79000717DDF /* Assets.xcassets */,
 				4303D489270DD79000717DDF /* LaunchScreen.storyboard */,
 				4303D48C270DD79000717DDF /* Info.plist */,
@@ -103,16 +119,24 @@
 			path = "Extensiond-Utilities";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		43A3228C270FA7E2001E65E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				434F64E4270F89440002ED02 /* FirstView.swift */,
 				434F64DE270F86180002ED02 /* SecondView.swift */,
 				434F64E2270F87C20002ED02 /* MyImageView.swift */,
+=======
+		43A3228F270FB038001E65E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43A32292270FB14A001E65E2 /* AddContactV.swift */,
+>>>>>>> imagenRandom
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		43A3228D270FA7F1001E65E2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,15 +144,31 @@
 				434F64DB270F83F00002ED02 /* SecondViewController.swift */,
 				434F64D5270F482C0002ED02 /* ContactVC.swift */,
 				434F64E0270F87840002ED02 /* CollectionVC.swift */,
+=======
+		43A32290270FB044001E65E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				434F64D5270F482C0002ED02 /* ContactVC.swift */,
+				4303D492270DDA1300717DDF /* ContactListVC.swift */,
+>>>>>>> imagenRandom
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		43A3228E270FA7F9001E65E2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
 				43AE5635270DE9950081313B /* ContactCell.swift */,
 				43AE5636270DE9950081313B /* ContactCell.xib */,
+=======
+		43A32291270FB05C001E65E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				43AE5636270DE9950081313B /* ContactCell.xib */,
+				43AE5635270DE9950081313B /* ContactCell.swift */,
+				43A32294270FFE44001E65E2 /* ContactInfo.swift */,
+>>>>>>> imagenRandom
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -219,7 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				43AE563B270DEFE40081313B /* Contact.swift in Sources */,
+<<<<<<< HEAD
 				434F64E3270F87C20002ED02 /* MyImageView.swift in Sources */,
+=======
+				43A32293270FB14A001E65E2 /* AddContactV.swift in Sources */,
+>>>>>>> imagenRandom
 				43AE5637270DE9950081313B /* ContactCell.swift in Sources */,
 				4303D496270DDCDA00717DDF /* UIView+Ext.swift in Sources */,
 				4303D47F270DD78F00717DDF /* AppDelegate.swift in Sources */,
@@ -229,6 +273,7 @@
 				434F64D8270F7A6F0002ED02 /* ImageData.swift in Sources */,
 				434F64DC270F83F00002ED02 /* SecondViewController.swift in Sources */,
 				4303D481270DD78F00717DDF /* SceneDelegate.swift in Sources */,
+				43A32295270FFE44001E65E2 /* ContactInfo.swift in Sources */,
 				4303D493270DDA1300717DDF /* ContactListVC.swift in Sources */,
 				434F64E1270F87840002ED02 /* CollectionVC.swift in Sources */,
 				434F64D6270F482C0002ED02 /* ContactVC.swift in Sources */,
